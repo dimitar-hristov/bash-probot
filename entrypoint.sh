@@ -2,8 +2,7 @@
 
 echo "Execute From Directory: $(pwd)"
 echo "Content: $(ls -al)"
-CHANGE_DIR_RES=cd ${{ github.action_path }}
-echo "$CHANGE_DIR_RES"
+cd "$GITHUB_ACTION_PATH"
 echo "Execute From Directory: $(pwd)"
 echo "Content: $(ls -al)"
 INSTALL_RESP=`npm install`
