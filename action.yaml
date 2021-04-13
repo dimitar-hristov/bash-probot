@@ -4,5 +4,7 @@ branding:
   icon: "gift"
   color: orange
 runs:
-  using: "node12"
-  main: "dist/index.js"
+  using: "composite"
+  steps:
+    - run: ${{ github.action_path }}/entrypoint.sh
+      shell: bash
